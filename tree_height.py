@@ -7,7 +7,7 @@ import numpy
 
 def compute_height(n, parents):
     berni={x:[] for x in range(n)}
-    sakn=[]
+    visassaknes=[]
     for x,vec in enumerate(parents):
         if vec==-2:
             visassaknes.append(x)
@@ -35,16 +35,18 @@ def compute_height(n, parents):
 
 def main():
     ievadits=input()
-    if 'F'in ievadits:
+    
+   
+    if 'I' in ievadits:
+        n=int(input())
+        parents=list(map(int,input().split()))
+        print(compute_height(n,parents))
+    elif 'F'in ievadits:
         fails=input()
         fails=("test/"+fails)
         if 'a'not in fails:
             with open(fails,'r')as fails:
-                return fails.read()
-    elif 'I' in ievadits:
-        n=int(input())
-        parents=list(map(int,input().split()))
-        print(compute_height(n,parents))
+            return fails.read()
     
 sys.setrecursionlimit(10**7)  # max depth of recursion
 threading.stack_size(2**27)   # new thread will get stack of such size
