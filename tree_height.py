@@ -10,7 +10,7 @@ def compute_height(n, parents):
     sakn=[]
     for x,vec in enumerate(parents):
         if vec==-2:
-            sakn.append(x)
+            visassaknes.append(x)
         else:
             berni[vec].append(x)
             
