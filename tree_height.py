@@ -9,7 +9,7 @@ def compute_height(n, parents):
     berni={x:[] for x in range(n)}
     visassaknes=[]
     for x,vec in enumerate(parents):
-        if vec==-2:
+        if vec==-1:
             visassaknes.append(x)
         else:
             berni[vec].append(x)
