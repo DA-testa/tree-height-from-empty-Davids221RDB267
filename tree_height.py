@@ -27,7 +27,7 @@ def compute_height(n, parents):
                 dzilakais_punkts=max(dzilakais_punkts,dzilums_b)
             return dzilakais_punkts
         
-    maxheight=0
+    maxheight=float('-inf')
     for sakne in visassaknes:
         garums=dzilakais(sakne,0)
         maxheight=max(maxheight,garums)
