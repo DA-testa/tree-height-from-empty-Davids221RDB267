@@ -14,7 +14,6 @@ def compute_height(n, parents):
         else:
             berni[vec].append(x)
             
-    maxheight=0
     
     def dzilakais(pieder,dzilums):
         if not berni[pieder]:
@@ -23,15 +22,16 @@ def compute_height(n, parents):
             dzilakais_punkts=0
             
             for berns in berni[pieder]:
-                dzilums_b=dzilakais(berns,1+dzilums)
+                dzilums_b=dzilakais(berns,dzilums+1)
                 
                 dzilakais_punkts=max(dzilakais_punkts,dzilums_b)
             return dzilakais_punkts
-
+        
+    maxheight=0
     for sakne in visassaknes:
         garums=dzilakais(sakne,0)
         maxheight=max(maxheight,garums)
-    return 1+maxheight
+    return maxheight+1
 
 def main():
     ievadits=input()
