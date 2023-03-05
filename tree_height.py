@@ -17,7 +17,7 @@ def compute_height(n, parents):
     maxheight=0
     
     def dzilakais(pieder,dzilums):
-        if not berni[pieder]
+        if not berni[pieder]:
             return dzilums
         else:
             dzilakais_punkts=0
@@ -41,7 +41,7 @@ def main():
         if 'a'not in fails:
             with open(fails,'r')as fails:
                 return fails.read()
-    elseif 'I' in ievadits:
+    elif 'I' in ievadits:
         n=int(input())
         
         parents=list(map(int,input().split()))
