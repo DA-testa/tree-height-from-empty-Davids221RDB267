@@ -46,7 +46,7 @@ def main():
         fails=("test/"+fails)
         if 'a'not in fails:
             with open(fails,'r')as fails:
-            return fails.read()
+                return fails.read()
     
 sys.setrecursionlimit(10**7)  # max depth of recursion
 threading.stack_size(2**27)   # new thread will get stack of such size
